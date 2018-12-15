@@ -16,6 +16,10 @@ class App extends React.Component {
   search (term) {
     console.log(`${term} was searched`);
     // TODO
+    // jQuery.post( url [, data ] [, success ] [, dataType ] )
+    $.post('/repos', {username: term}, (data => {
+      console.log(`SUCCESS: Client received ${data}`);
+    }));
   }
 
   render () {

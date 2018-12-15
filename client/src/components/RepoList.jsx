@@ -8,6 +8,7 @@ const RepoList = (props) => (
     <ul>
       {props.repos.map((repo) => 
         <li> 
+          <span>#Forks: {repo.forks_count} - </span>
           <a href={repo.html_url}>{repo.repoName}</a>
         </li>
       )}
